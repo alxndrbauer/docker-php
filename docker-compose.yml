@@ -12,7 +12,7 @@ services:
             MYSQL_USER: ${MYSQL_USER}
             MYSQL_PASSWORD: ${MYSQL_PASSWORD}
         ports:
-            - 3306:3306
+            - 4306:3306
     php:
         build: php7-fpm
         container_name: php7
