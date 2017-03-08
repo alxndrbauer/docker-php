@@ -1,10 +1,10 @@
-# Docker Symfony (PHP7-FPM - NGINX - MySQL - ELK)
+# Docker Symfony (PHP7-FPM - NGINX - MariaDB - ELK)
 
-[![Build Status](https://travis-ci.org/maxpou/docker-symfony.svg?branch=master)](https://travis-ci.org/maxpou/docker-symfony)
+[![Build Status](https://travis-ci.org/bauer-alexander/docker-php.svg?branch=master)](https://travis-ci.org/bauer-alexander/docker-php)
 
 ![](doc/schema.png)
 
-Docker-symfony gives you everything you need for developing Symfony application. This complete stack run with docker and [docker-compose (1.7 or higher)](https://docs.docker.com/compose/).
+Docker-php gives you everything you need for developing PHP applications. This complete stack run with docker and [docker-compose (1.7 or higher)](https://docs.docker.com/compose/).
 
 ## Installation
 
@@ -29,7 +29,7 @@ Docker-symfony gives you everything you need for developing Symfony application.
     $ docker network inspect bridge | grep Gateway
 
     # unix only (on Windows, edit C:\Windows\System32\drivers\etc\hosts)
-    $ sudo echo "171.17.0.1 symfony.dev" >> /etc/hosts
+    $ sudo echo "127.0.0.1 symfony.dev" >> /etc/hosts
     ```
 
     **Note:** For **OS X**, please take a look [here](https://docs.docker.com/docker-for-mac/networking/) and for **Windows** read [this](https://docs.docker.com/docker-for-windows/#/step-4-explore-the-application-and-run-examples) (4th step).
@@ -48,10 +48,6 @@ Docker-symfony gives you everything you need for developing Symfony application.
         ```bash
         $ docker-compose exec php bash
         $ composer install
-        # Symfony2
-        $ sf doctrine:database:create
-        $ sf doctrine:schema:update --force
-        $ sf doctrine:fixtures:load --no-interaction
         # Symfony3
         $ sf3 doctrine:database:create
         $ sf3 doctrine:schema:update --force
