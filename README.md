@@ -25,7 +25,7 @@ Docker-php gives you everything you need for developing PHP applications. This c
 3. Update your system host file (add symfony.dev)
 
     ```bash
-    # UNIX only: get containers IP address and update host (replace IP according to your configuration)
+    # UNIX only: get containers IP address and update host (replace IP according to your configuration) test
     $ docker network inspect bridge | grep Gateway
 
     # unix only (on Windows, edit C:\Windows\System32\drivers\etc\hosts)
